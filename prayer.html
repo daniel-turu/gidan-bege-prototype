@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar { display: none;}
+        * { font-family: 'Poppins', sans-serif; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-blue': '#0033A0',
+                        'bright-red': '#E00025',
+                        'orange': '#FF6A00',
+                        'green': '#00A859',
+                        'neutral-black': '#222222'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<div id="mobile-app" class="max-w-md mx-auto bg-white min-h-screen relative">
+<body class="bg-gradient-to-br from-blue-50 to-green-50 min-h-screen">
+
+    <header id="header" class="bg-white shadow-sm px-4 py-3 sticky top-0 z-50">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 bg-gradient-to-r from-deep-blue to-green rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-praying-hands text-white text-sm"></i>
+                </div>
+                <h1 class="text-xl font-semibold text-neutral-black">Prayer Wall</h1>
+            </div>
+            <button class="w-10 h-10 bg-gradient-to-r from-bright-red to-orange rounded-xl flex items-center justify-center shadow-lg">
+                <i class="fa-solid fa-plus text-white"></i>
+            </button>
+        </div>
+    </header>
+
+    <main id="prayer-main" class="px-4 py-6 pb-24">
+        
+        <section id="prayer-stats" class="mb-6">
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-white/20">
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-deep-blue">2,847</div>
+                        <div class="text-sm text-gray-600">Prayer Requests</div>
+                    </div>
+                    <div class="text-center border-x border-gray-200">
+                        <div class="text-2xl font-bold text-green">15,293</div>
+                        <div class="text-sm text-gray-600">Prayers Offered</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-orange">892</div>
+                        <div class="text-sm text-gray-600">Answered</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prayer-categories" class="mb-6">
+            <div class="flex space-x-2 overflow-x-auto pb-2">
+                <button class="bg-deep-blue text-white px-4 py-2 rounded-full text-sm whitespace-nowrap font-medium">All</button>
+                <button class="bg-white text-gray-600 px-4 py-2 rounded-full text-sm whitespace-nowrap border">Healing</button>
+                <button class="bg-white text-gray-600 px-4 py-2 rounded-full text-sm whitespace-nowrap border">Family</button>
+                <button class="bg-white text-gray-600 px-4 py-2 rounded-full text-sm whitespace-nowrap border">Provision</button>
+                <button class="bg-white text-gray-600 px-4 py-2 rounded-full text-sm whitespace-nowrap border">Guidance</button>
+            </div>
+        </section>
+
+        <section id="prayer-requests" class="space-y-4">
+            
+            <article id="prayer-card-1" class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-white/30">
+                <div class="flex items-start space-x-3 mb-3">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg" alt="User" class="w-10 h-10 rounded-full object-cover">
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span class="font-medium text-neutral-black">Sarah M.</span>
+                            <span class="text-xs text-gray-500">2 hours ago</span>
+                        </div>
+                        <span class="inline-block bg-green/10 text-green text-xs px-2 py-1 rounded-full">Healing</span>
+                    </div>
+                </div>
+                <p class="text-gray-700 text-sm mb-4 leading-relaxed">Please pray for my mother who is recovering from surgery. She's been in pain and we're trusting God for complete healing and restoration.</p>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <button class="flex items-center space-x-2 text-deep-blue hover:bg-deep-blue/5 px-3 py-2 rounded-lg transition-colors">
+                            <i class="fa-solid fa-hands-praying text-sm"></i>
+                            <span class="text-sm font-medium">127</span>
+                        </button>
+                        <button class="flex items-center space-x-2 text-gray-600 hover:bg-gray-100 px-3 py-2 rounded-lg transition-colors">
+                            <i class="fa-solid fa-comment text-sm"></i>
+                            <span class="text-sm">12</span>
+                        </button>
+                    </div>
+                    <button class="text-gray-400 hover:text-gray-600 p-2">
+                        <i class="fa-solid fa-share text-sm"></i>
+                    </button>
+                </div>
+            </article>
+
+            <article id="prayer-card-2" class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-white/30">
+                <div class="flex items-start space-x-3 mb-3">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="User" class="w-10 h-10 rounded-full object-cover">
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span class="font-medium text-neutral-black">David K.</span>
+                            <span class="text-xs text-gray-500">4 hours ago</span>
+                        </div>
+                        <span class="inline-block bg-orange/10 text-orange text-xs px-2 py-1 rounded-full">Provision</span>
+                    </div>
+                </div>
+                <p class="text-gray-700 text-sm mb-4 leading-relaxed">I lost my job last month and have been struggling to provide for my family. Please pray for God's provision and a new opportunity.</p>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <button class="flex items-center space-x-2 text-deep-blue hover:bg-deep-blue/5 px-3 py-2 rounded-lg transition-colors">
+                            <i class="fa-solid fa-hands-praying text-sm"></i>
+                            <span class="text-sm font-medium">89</span>
+                        </button>
+                        <button class="flex items-center space-x-2 text-gray-600 hover:bg-gray-100 px-3 py-2 rounded-lg transition-colors">
+                            <i class="fa-solid fa-comment text-sm"></i>
+                            <span class="text-sm">8</span>
+                        </button>
+                    </div>
+                    <button class="text-gray-400 hover:text-gray-600 p-2">
+                        <i class="fa-solid fa-share text-sm"></i>
+                    </button>
+                </div>
+            </article>
+
+            <article id="prayer-card-3" class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-white/30">
+                <div class="flex items-start space-x-3 mb-3">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg" alt="User" class="w-10 h-10 rounded-full object-cover">
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span class="font-medium text-neutral-black">Grace O.</span>
+                            <span class="text-xs text-gray-500">6 hours ago</span>
+                        </div>
+                        <span class="inline-block bg-bright-red/10 text-bright-red text-xs px-2 py-1 rounded-full">Family</span>
+                    </div>
+                </div>
+                <p class="text-gray-700 text-sm mb-4 leading-relaxed">Please pray for reconciliation in my family. There has been tension and misunderstandings. We need God's peace and love to heal our relationships.</p>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <button class="flex items-center space-x-2 text-deep-blue hover:bg-deep-blue/5 px-3 py-2 rounded-lg transition-colors">
+                            <i class="fa-solid fa-hands-praying text-sm"></i>
+                            <span class="text-sm font-medium">156</span>
+                        </button>
+                        <button class="flex items-center space-x-2 text-gray-600 hover:bg-gray-100 px-3 py-2 rounded-lg transition-colors">
+                            <i class="fa-solid fa-comment text-sm"></i>
+                            <span class="text-sm">23</span>
+                        </button>
+                    </div>
+                    <button class="text-gray-400 hover:text-gray-600 p-2">
+                        <i class="fa-solid fa-share text-sm"></i>
+                    </button>
+                </div>
+            </article>
+
+            <article id="prayer-card-4" class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-white/30">
+                <div class="flex items-start space-x-3 mb-3">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-8.jpg" alt="User" class="w-10 h-10 rounded-full object-cover">
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span class="font-medium text-neutral-black">John T.</span>
+                            <span class="text-xs text-gray-500">8 hours ago</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="inline-block bg-deep-blue/10 text-deep-blue text-xs px-2 py-1 rounded-full">Guidance</span>
+                            <span class="inline-block bg-green/20 text-green text-xs px-2 py-1 rounded-full font-medium">✓ Answered</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 text-sm mb-2 leading-relaxed">Thank you for praying! God has given me clear direction about my career path. I'm starting a new position next week!</p>
+                <p class="text-green text-sm font-medium mb-4">Update: Praise God! The new job is everything I prayed for and more. 🙏</p>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <button class="flex items-center space-x-2 text-deep-blue hover:bg-deep-blue/5 px-3 py-2 rounded-lg transition-colors">
+                            <i class="fa-solid fa-hands-praying text-sm"></i>
+                            <span class="text-sm font-medium">203</span>
+                        </button>
+                        <button class="flex items-center space-x-2 text-gray-600 hover:bg-gray-100 px-3 py-2 rounded-lg transition-colors">
+                            <i class="fa-solid fa-comment text-sm"></i>
+                            <span class="text-sm">31</span>
+                        </button>
+                    </div>
+                    <button class="text-gray-400 hover:text-gray-600 p-2">
+                        <i class="fa-solid fa-share text-sm"></i>
+                    </button>
+                </div>
+            </article>
+
+            <article id="prayer-card-5" class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-white/30">
+                <div class="flex items-start space-x-3 mb-3">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-6.jpg" alt="User" class="w-10 h-10 rounded-full object-cover">
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span class="font-medium text-neutral-black">Mary L.</span>
+                            <span class="text-xs text-gray-500">1 day ago</span>
+                        </div>
+                        <span class="inline-block bg-green/10 text-green text-xs px-2 py-1 rounded-full">Healing</span>
+                    </div>
+                </div>
+                <p class="text-gray-700 text-sm mb-4 leading-relaxed">Please pray for the children in our orphanage. Some have been dealing with illness and we need God's healing touch upon them.</p>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <button class="flex items-center space-x-2 text-deep-blue hover:bg-deep-blue/5 px-3 py-2 rounded-lg transition-colors">
+                            <i class="fa-solid fa-hands-praying text-sm"></i>
+                            <span class="text-sm font-medium">342</span>
+                        </button>
+                        <button class="flex items-center space-x-2 text-gray-600 hover:bg-gray-100 px-3 py-2 rounded-lg transition-colors">
+                            <i class="fa-solid fa-comment text-sm"></i>
+                            <span class="text-sm">45</span>
+                        </button>
+                    </div>
+                    <button class="text-gray-400 hover:text-gray-600 p-2">
+                        <i class="fa-solid fa-share text-sm"></i>
+                    </button>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+
+
+    <div class="relative max-w-md mx-auto">
+  <div class="fixed right-[calc(50%-13rem)] bottom-28"> 
+        <button id="floating-donate" class="gradient-bg-action text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg glow-red z-30">
+        <i class="fa-solid fa-hand-holding-dollar text-xl"></i>
+    </button>
+ </div>
+</div>
+
+
+    <nav id="bottom-navigation" class="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-md bg-white border-t border-gray-200 px-6 py-3">
+    <div class="flex items-center justify-around py-3">
+        <a href="/index.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-house text-gray-400 text-xl"></i>
+            <span class="text-xs font-medium text-gray-400">Home</span>
+        </a>
+        <a href="/stories.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-newspaper text-gray-400 text-xl"></i>
+            <span class="text-xs font-medium text-gray-400">Stories</span>
+        </a>
+        <a href="prayer.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-hands-praying text-gb-blue text-xl"></i>
+            <span class="text-xs font-medium text-gb-blue">Prayer</span>
+        </a>
+        <a href="/about.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-circle-info text-gray-400 text-xl"></i>
+            <span class="text-xs font-medium text-gray-400">About</span>
+        </a>
+        <a href="/profile.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-user text-gray-400 text-xl"></i>
+            <span class="text-xs font-medium text-gray-400">Profile</span>
+        </a>
+    </div>
+</nav>
+
+
+</body>
+</div>
+</html>

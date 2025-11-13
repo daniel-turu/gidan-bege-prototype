@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-blue': '#0033A0',
+                        'bright-red': '#E00025',
+                        'orange': '#FF6A00',
+                        'green': '#00A859',
+                        'neutral-black': '#222222'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'nunito': ['Nunito Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>::-webkit-scrollbar { display: none;}</style>
+</head>
+<div id="mobile-app" class="max-w-md mx-auto bg-white min-h-screen relative">
+<body class="bg-gradient-to-br from-gray-50 to-blue-50 font-nunito">
+
+<main id="profile-main" class="pb-24">
+    
+    <section id="profile-header" class="bg-gradient-to-br from-deep-blue to-green pt-12 pb-20 px-4 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-32 -mt-32"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-5 rounded-full -ml-24 -mb-24"></div>
+        
+        <div class="relative z-10 flex justify-between items-center mb-8">
+            <h1 class="text-white text-2xl font-poppins font-bold">My Profile</h1>
+            <button class="text-white bg-white bg-opacity-20 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-gear text-lg"></i>
+            </button>
+        </div>
+        
+        <div id="profile-avatar-section" class="relative z-10 flex flex-col items-center">
+            <div class="relative mb-4">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" alt="Profile" class="w-28 h-28 rounded-full border-4 border-white shadow-xl object-cover">
+                <button class="absolute bottom-0 right-0 w-9 h-9 bg-bright-red rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+                    <i class="fa-solid fa-camera text-white text-sm"></i>
+                </button>
+            </div>
+            <h2 class="text-white text-2xl font-poppins font-bold mb-1">John Emmanuel</h2>
+            <p class="text-white text-opacity-90 text-sm mb-4">Volunteer since 2023</p>
+            
+            <div class="flex gap-3">
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-2xl">
+                    <p class="text-white text-xs font-medium">Member ID</p>
+                    <p class="text-white text-sm font-bold">GB-2023-0142</p>
+                </div>
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-2xl">
+                    <p class="text-white text-xs font-medium">Status</p>
+                    <p class="text-white text-sm font-bold flex items-center gap-1">
+                        <i class="fa-solid fa-circle text-green text-xs"></i> Active
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact-stats-section" class="px-4 -mt-12 relative z-20 mb-6">
+        <div class="bg-white rounded-3xl shadow-xl p-5">
+            <h3 class="text-neutral-black font-poppins font-bold text-lg mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-chart-line text-deep-blue"></i>
+                My Impact
+            </h3>
+            <div class="grid grid-cols-3 gap-4">
+                <div id="donations-stat" class="text-center">
+                    <div class="w-14 h-14 mx-auto mb-2 bg-gradient-to-br from-bright-red to-orange rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-hand-holding-heart text-white text-xl"></i>
+                    </div>
+                    <p class="text-2xl font-bold text-neutral-black font-poppins">12</p>
+                    <p class="text-xs text-gray-500">Donations</p>
+                </div>
+                <div id="volunteer-hours-stat" class="text-center">
+                    <div class="w-14 h-14 mx-auto mb-2 bg-gradient-to-br from-deep-blue to-green rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-clock text-white text-xl"></i>
+                    </div>
+                    <p class="text-2xl font-bold text-neutral-black font-poppins">48</p>
+                    <p class="text-xs text-gray-500">Hours</p>
+                </div>
+                <div id="prayers-stat" class="text-center">
+                    <div class="w-14 h-14 mx-auto mb-2 bg-gradient-to-br from-orange to-green rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-hands-praying text-white text-xl"></i>
+                    </div>
+                    <p class="text-2xl font-bold text-neutral-black font-poppins">34</p>
+                    <p class="text-xs text-gray-500">Prayers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profile-menu-section" class="px-4 mb-6">
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+            
+            <div id="menu-personal" class="border-b border-gray-100">
+                <button class="w-full px-5 py-4 flex items-center justify-between hover:bg-gray-50 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-11 h-11 bg-gradient-to-br from-deep-blue to-blue-400 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-user text-white"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-neutral-black font-semibold text-sm">Personal Information</p>
+                            <p class="text-gray-400 text-xs">Update your details</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-300"></i>
+                </button>
+            </div>
+
+            <div id="menu-donations" class="border-b border-gray-100">
+                <button class="w-full px-5 py-4 flex items-center justify-between hover:bg-gray-50 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-11 h-11 bg-gradient-to-br from-bright-red to-orange rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-receipt text-white"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-neutral-black font-semibold text-sm">Donation History</p>
+                            <p class="text-gray-400 text-xs">View all contributions</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-300"></i>
+                </button>
+            </div>
+
+            <div id="menu-volunteer" class="border-b border-gray-100">
+                <button class="w-full px-5 py-4 flex items-center justify-between hover:bg-gray-50 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-11 h-11 bg-gradient-to-br from-green to-teal-400 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-hands-holding-circle text-white"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-neutral-black font-semibold text-sm">Volunteer Activities</p>
+                            <p class="text-gray-400 text-xs">Track your service</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-300"></i>
+                </button>
+            </div>
+
+            <div id="menu-prayer" class="border-b border-gray-100">
+                <button class="w-full px-5 py-4 flex items-center justify-between hover:bg-gray-50 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-11 h-11 bg-gradient-to-br from-orange to-yellow-400 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-dove text-white"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-neutral-black font-semibold text-sm">My Prayer Requests</p>
+                            <p class="text-gray-400 text-xs">View your prayers</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-300"></i>
+                </button>
+            </div>
+
+            <div id="menu-saved">
+                <button class="w-full px-5 py-4 flex items-center justify-between hover:bg-gray-50 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-11 h-11 bg-gradient-to-br from-purple-500 to-pink-400 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-bookmark text-white"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-neutral-black font-semibold text-sm">Saved Stories</p>
+                            <p class="text-gray-400 text-xs">Your bookmarked content</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-300"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="profile-settings-section" class="px-4 mb-6">
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+            
+            <div id="settings-notifications" class="border-b border-gray-100">
+                <button class="w-full px-5 py-4 flex items-center justify-between hover:bg-gray-50 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-11 h-11 bg-gray-100 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-bell text-deep-blue"></i>
+                        </div>
+                        <p class="text-neutral-black font-semibold text-sm">Notifications</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-300"></i>
+                </button>
+            </div>
+
+            <div id="settings-privacy" class="border-b border-gray-100">
+                <button class="w-full px-5 py-4 flex items-center justify-between hover:bg-gray-50 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-11 h-11 bg-gray-100 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-lock text-deep-blue"></i>
+                        </div>
+                        <p class="text-neutral-black font-semibold text-sm">Privacy & Security</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-300"></i>
+                </button>
+            </div>
+
+            <div id="settings-help" class="border-b border-gray-100">
+                <button class="w-full px-5 py-4 flex items-center justify-between hover:bg-gray-50 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-11 h-11 bg-gray-100 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-circle-question text-deep-blue"></i>
+                        </div>
+                        <p class="text-neutral-black font-semibold text-sm">Help & Support</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-300"></i>
+                </button>
+            </div>
+
+            <div id="settings-about">
+                <button class="w-full px-5 py-4 flex items-center justify-between hover:bg-gray-50 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-11 h-11 bg-gray-100 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-circle-info text-deep-blue"></i>
+                        </div>
+                        <p class="text-neutral-black font-semibold text-sm">About Gidan Bege</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-300"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="profile-logout-section" class="px-4 mb-6">
+        <button class="w-full bg-gradient-to-r from-bright-red to-orange text-white py-4 rounded-2xl font-semibold shadow-lg flex items-center justify-center gap-2 hover:shadow-xl transition">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Sign Out
+        </button>
+    </section>
+
+    <section id="profile-version" class="px-4 text-center mb-8">
+        <p class="text-gray-400 text-xs">Gidan Bege Connect</p>
+        <p class="text-gray-400 text-xs">Version 1.0.2</p>
+    </section>
+
+</main>
+    <nav id="bottom-navigation" class="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-md bg-white border-t border-gray-200 px-6 py-3">
+    <div class="flex items-center justify-around py-3">
+        <a href="/index.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-house text-gray-400 text-xl"></i>
+            <span class="text-xs font-medium text-gray-400">Home</span>
+        </a>
+        <a href="/stories.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-newspaper text-gray-400 text-xl"></i>
+            <span class="text-xs font-medium text-gray-400">Stories</span>
+        </a>
+        <a href="prayer.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-hands-praying text-gray-400 text-xl"></i>
+            <span class="text-xs font-medium text-gray-400">Prayer</span>
+        </a>
+        <a href="/about.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-circle-info text-gray-400 text-xl"></i>
+            <span class="text-xs font-medium text-gray-400">About</span>
+        </a>
+        <a href="/profile.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-user text-gb-blue text-xl"></i>
+            <span class="text-xs font-medium text-gb-blue">Profile</span>
+        </a>
+    </div>
+</nav>
+
+</body>
+</div>
+</html>

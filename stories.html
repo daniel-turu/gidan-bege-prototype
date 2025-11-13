@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        ::webkit-scrollbar { display: none; }
+        * { font-family: 'Poppins', sans-serif; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-blue': '#0033A0',
+                        'bright-red': '#E00025',
+                        'orange': '#FF6A00',
+                        'green': '#00A859',
+                        'neutral-black': '#222222'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<div id="mobile-app" class="max-w-md mx-auto bg-white min-h-screen relative">
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="flex items-center justify-between px-4 py-3">
+            <button class="p-2">
+                <i class="fa-solid fa-arrow-left text-neutral-black text-lg"></i>
+            </button>
+            <h1 class="text-lg font-semibold text-neutral-black">Stories</h1>
+            <button class="p-2">
+                <i class="fa-solid fa-search text-neutral-black text-lg"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="pb-20">
+        
+        <!-- Featured Story -->
+        <section id="featured-story" class="px-4 pt-4">
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="h-48 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/63a51e88dc-ddd42cfe1590b2e7f3d6.png" alt="African children smiling in a classroom, warm lighting, hope and education theme" />
+                </div>
+                <div class="p-4">
+                    <span class="inline-block bg-gradient-to-r from-deep-blue to-green text-white text-xs font-medium px-3 py-1 rounded-full mb-2">Featured</span>
+                    <h2 class="text-lg font-semibold text-neutral-black mb-2">Building Hope Through Education</h2>
+                    <p class="text-gray-600 text-sm mb-3 leading-relaxed">Meet Sarah, a 12-year-old who dreams of becoming a doctor. Through our education program, she now has access to books, uniforms, and the support she needs...</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-500">2 days ago</span>
+                        <div class="flex items-center space-x-3">
+                            <button class="flex items-center space-x-1 text-gray-500">
+                                <i class="fa-regular fa-heart text-sm"></i>
+                                <span class="text-xs">24</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-500">
+                                <i class="fa-regular fa-comment text-sm"></i>
+                                <span class="text-xs">8</span>
+                            </button>
+                            <button class="text-gray-500">
+                                <i class="fa-solid fa-share text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Categories -->
+        <section id="filter-categories" class="px-4 py-4">
+            <div class="flex space-x-3 overflow-x-auto scrollbar-hide">
+                <button class="bg-gradient-to-r from-deep-blue to-green text-white px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">All Stories</button>
+                <button class="bg-white border border-gray-200 text-gray-600 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">Education</button>
+                <button class="bg-white border border-gray-200 text-gray-600 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">Medical</button>
+                <button class="bg-white border border-gray-200 text-gray-600 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">Outreach</button>
+                <button class="bg-white border border-gray-200 text-gray-600 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">Community</button>
+            </div>
+        </section>
+
+        <!-- Stories Grid -->
+        <section id="stories-grid" class="px-4 space-y-4">
+            
+            <!-- Story Card 1 -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="h-40 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/92328f1e44-22d17ea10ef43aac958d.png" alt="African woman cooking food for community, charity kitchen, warm atmosphere" />
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-orange/10 text-orange text-xs font-medium px-2 py-1 rounded-full">Community</span>
+                        <span class="text-xs text-gray-500 ml-auto">1 week ago</span>
+                    </div>
+                    <h3 class="font-semibold text-neutral-black mb-2">Feeding the Hungry</h3>
+                    <p class="text-gray-600 text-sm mb-3 leading-relaxed">Our weekly food distribution program reached 200 families this month, providing nutritious meals and hope...</p>
+                    <div class="flex items-center justify-between">
+                        <button class="text-deep-blue text-sm font-medium">Read More</button>
+                        <div class="flex items-center space-x-3">
+                            <button class="flex items-center space-x-1 text-gray-500">
+                                <i class="fa-regular fa-heart text-sm"></i>
+                                <span class="text-xs">18</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-500">
+                                <i class="fa-regular fa-comment text-sm"></i>
+                                <span class="text-xs">5</span>
+                            </button>
+                            <button class="text-gray-500">
+                                <i class="fa-solid fa-share text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story Card 2 -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="h-40 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/9baf919d66-dd03d64c728592151ca5.png" alt="Medical volunteers treating patients in rural clinic, compassionate healthcare" />
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-bright-red/10 text-bright-red text-xs font-medium px-2 py-1 rounded-full">Medical</span>
+                        <span class="text-xs text-gray-500 ml-auto">3 days ago</span>
+                    </div>
+                    <h3 class="font-semibold text-neutral-black mb-2">Mobile Medical Clinic</h3>
+                    <p class="text-gray-600 text-sm mb-3 leading-relaxed">Our medical team traveled to remote villages, providing free healthcare to over 150 people in need...</p>
+                    <div class="flex items-center justify-between">
+                        <button class="text-deep-blue text-sm font-medium">Read More</button>
+                        <div class="flex items-center space-x-3">
+                            <button class="flex items-center space-x-1 text-gray-500">
+                                <i class="fa-regular fa-heart text-sm"></i>
+                                <span class="text-xs">32</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-500">
+                                <i class="fa-regular fa-comment text-sm"></i>
+                                <span class="text-xs">12</span>
+                            </button>
+                            <button class="text-gray-500">
+                                <i class="fa-solid fa-share text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story Card 3 -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="h-40 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/fc1fba4deb-1f57daf3afe68ae36daf.png" alt="Children playing and learning in orphanage, joyful atmosphere, caring environment" />
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-green/10 text-green text-xs font-medium px-2 py-1 rounded-full">Education</span>
+                        <span class="text-xs text-gray-500 ml-auto">5 days ago</span>
+                    </div>
+                    <h3 class="font-semibold text-neutral-black mb-2">New Learning Center Opens</h3>
+                    <p class="text-gray-600 text-sm mb-3 leading-relaxed">Thanks to generous donations, we opened a new learning center that will serve 80 children in the community...</p>
+                    <div class="flex items-center justify-between">
+                        <button class="text-deep-blue text-sm font-medium">Read More</button>
+                        <div class="flex items-center space-x-3">
+                            <button class="flex items-center space-x-1 text-gray-500">
+                                <i class="fa-regular fa-heart text-sm"></i>
+                                <span class="text-xs">45</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-500">
+                                <i class="fa-regular fa-comment text-sm"></i>
+                                <span class="text-xs">15</span>
+                            </button>
+                            <button class="text-gray-500">
+                                <i class="fa-solid fa-share text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story Card 4 -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="h-40 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/99a364803c-8d34e127370cc3a491f8.png" alt="Widow receiving support and training, empowerment program, hope and dignity" />
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-orange/10 text-orange text-xs font-medium px-2 py-1 rounded-full">Outreach</span>
+                        <span class="text-xs text-gray-500 ml-auto">1 week ago</span>
+                    </div>
+                    <h3 class="font-semibold text-neutral-black mb-2">Empowering Widows</h3>
+                    <p class="text-gray-600 text-sm mb-3 leading-relaxed">Meet Grace, who started her own small business through our vocational training program for widows...</p>
+                    <div class="flex items-center justify-between">
+                        <button class="text-deep-blue text-sm font-medium">Read More</button>
+                        <div class="flex items-center space-x-3">
+                            <button class="flex items-center space-x-1 text-gray-500">
+                                <i class="fa-regular fa-heart text-sm"></i>
+                                <span class="text-xs">28</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-500">
+                                <i class="fa-regular fa-comment text-sm"></i>
+                                <span class="text-xs">9</span>
+                            </button>
+                            <button class="text-gray-500">
+                                <i class="fa-solid fa-share text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="pt-4 pb-8">
+                <button class="w-full bg-gradient-to-r from-deep-blue to-green text-white py-3 rounded-2xl font-medium">
+                    Load More Stories
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <div class="relative max-w-md mx-auto">
+  <div class="fixed right-[calc(50%-13rem)] bottom-28"> 
+        <button id="floating-donate" class="gradient-bg-action text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg glow-red z-30">
+        <i class="fa-solid fa-hand-holding-dollar text-xl"></i>
+    </button>
+ </div>
+</div>
+
+
+    <nav id="bottom-navigation" class="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-md bg-white border-t border-gray-200 px-6 py-3">
+        <div class="flex items-center justify-around py-3">
+        <a href="/index.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-house text-gray-400 text-xl"></i>
+            <span class="text-xs font-medium text-gray-400">Home</span>
+        </a>
+        <a href="/stories.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-newspaper text-gb-blue text-xl"></i>
+            <span class="text-xs font-medium text-gb-blue">Stories</span>
+        </a>
+        <a href="prayer.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-hands-praying text-gray-400 text-xl"></i>
+            <span class="text-xs font-medium text-gray-400">Prayer</span>
+        </a>
+        <a href="/about.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-circle-info text-gray-400 text-xl"></i>
+            <span class="text-xs font-medium text-gray-400">About</span>
+        </a>
+        <a href="/profile.html" class="flex flex-col items-center space-y-1">
+            <i class="fa-solid fa-user text-gray-400 text-xl"></i>
+            <span class="text-xs font-medium text-gray-400">Profile</span>
+        </a>
+    </div>
+</nav>
+
+
+
+</body>
+</div>
+</html>
